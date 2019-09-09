@@ -18,8 +18,7 @@ data "aws_iam_policy_document" "example" {
 }
 
 module "example" {
-  source  = "git::https://github.com/trebidav/terraform-modules-ecs-app-ec2/"
-  version = "0.1.0"
+  source = "git::https://github.com/trebidav/terraform-module-ecs-app-ec2/"
 
   # naming
   project = "${var.project}"

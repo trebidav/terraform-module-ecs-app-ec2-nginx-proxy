@@ -1,9 +1,10 @@
 resource "aws_lb_target_group" "application" {
-  name        = "${replace("${local.name}", "/(.{0,31})(.*)/", "$1")}"
-  port        = "${var.port}"
-  protocol    = "HTTP"
-  target_type = "instance"
-  vpc_id      = "${var.vpc_id}"
+  name                 = "${replace("${local.name}", "/(.{0,31})(.*)/", "$1")}"
+  port                 = "${var.port}"
+  protocol             = "HTTP"
+  target_type          = "instance"
+  vpc_id               = "${var.vpc_id}"
+  deregistration_delay = "${var.deregistration_delay}"
 
   health_check {
     interval            = "${var.healthcheck_interval}"

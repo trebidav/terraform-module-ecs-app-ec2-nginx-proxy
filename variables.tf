@@ -142,3 +142,7 @@ variable "healthcheck_grace" {
 variable "scheduling_strategy" {
   default = "REPLICA"
 }
+
+variable "deregistration_delay" {
+  default = 30
+}
