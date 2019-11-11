@@ -4,3 +4,7 @@ resource "aws_cloudwatch_log_group" "application_logs" {
 
   tags = "${var.tags}"
 }
+
+output "cloudwatch_log_group_arn" {
+  value = "${aws_cloudwatch_log_group.application_logs.arn}"
+}
