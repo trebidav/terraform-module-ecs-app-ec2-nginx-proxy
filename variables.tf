@@ -47,13 +47,18 @@ variable "secrets" {
 }
 
 variable "cpu" {
-  description = "Hard limit of CPU for the task"
-  default     = 512
+  description = "CPU reservation for the task"
+  default     = 256
 }
 
 variable "memory" {
-  description = "Hard limit of MEM for the task"
-  default     = 1024
+  description = "MEM reservation for the task"
+  default     = 256
+}
+
+variable "memory_limit" {
+  description = "MEM hard limit for the task"
+  default     = ""
 }
 
 variable "cluster_name" {

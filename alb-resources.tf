@@ -33,8 +33,9 @@ resource "aws_lb_listener_rule" "admin" {
   }
 
   condition {
-    field  = "host-header"
-    values = ["${var.url}"]
+    host-header {
+      values = ["${var.url}"]
+    }
   }
 
   depends_on = ["aws_lb_target_group.application"]
