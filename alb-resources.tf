@@ -33,7 +33,7 @@ resource "aws_lb_listener_rule" "admin" {
   }
 
   condition {
-    host-header {
+    host_header {
       values = ["${var.url}"]
     }
   }
