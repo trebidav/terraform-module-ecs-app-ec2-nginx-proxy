@@ -1,13 +1,13 @@
 module "container_definition" {
   source  = "cloudposse/ecs-container-definition/aws"
-  version = "v0.10.0"
+  version = "v0.19.0"
 
   container_name  = "${var.name}"
   container_image = "${var.image == "" ? aws_ecr_repository.application.repository_url : var.image}"
 
   container_cpu                = "${var.cpu}"
   container_memory_reservation = "${var.memory}"
-  container_memory             = ""
+  container_memory             = "${var.memory_limit}"
 
   port_mappings = [
     {
