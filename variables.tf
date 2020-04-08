@@ -58,7 +58,7 @@ variable "memory" {
 
 variable "memory_limit" {
   description = "MEM hard limit for the task"
-  default     = ""
+  default     = 0
 }
 
 variable "cluster_name" {
