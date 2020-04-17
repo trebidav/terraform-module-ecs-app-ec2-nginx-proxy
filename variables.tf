@@ -151,3 +151,7 @@ variable "scheduling_strategy" {
 variable "deregistration_delay" {
   default = 30
 }
+
+variable "load_balancing_algorithm_type" {
+  default = "least_outstanding_requests"
+}
