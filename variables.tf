@@ -155,3 +155,11 @@ variable "deregistration_delay" {
 variable "load_balancing_algorithm_type" {
   default = "least_outstanding_requests"
 }
+
+variable "placement_constraint_type" {
+  default = "memberOf"
+}
+
+variable "placement_constraint_expression" {
+  default = "agentConnected==true"
+}
