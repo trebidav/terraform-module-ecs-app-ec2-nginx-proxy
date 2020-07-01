@@ -7,7 +7,7 @@ resource "aws_ecs_task_definition" "application" {
   network_mode             = "bridge"
   requires_compatibilities = ["EC2"]
 
-  container_definitions = ["${module.container_definition.json_map}, ${module.container_definition_nginx.json_map}"]
+  container_definitions = "[${module.container_definition.json_map},${module.container_definition_nginx.json_map}]"
 
   volume {
     name = "nginx_config"
