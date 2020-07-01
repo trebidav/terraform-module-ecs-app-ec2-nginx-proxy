@@ -35,8 +35,8 @@ module "container_definition_nginx" {
   container_name  = "nginx_proxy"
   container_image = "nginx:latest"
 
-  container_cpu                = "0"
-  container_memory_reservation = "0"
+  container_cpu                = "64"
+  container_memory_reservation = "64"
   container_memory             = "0"
 
   port_mappings = [
