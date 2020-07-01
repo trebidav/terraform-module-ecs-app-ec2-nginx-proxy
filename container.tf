@@ -50,7 +50,7 @@ module "container_definition_nginx" {
   volumes_from = [
     {
       "sourceContainer" = "${var.name}"
-      "readOnly"        = true
+      "readOnly"        = "true"
     },
   ]
 
