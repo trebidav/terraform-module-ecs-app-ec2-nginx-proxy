@@ -47,9 +47,16 @@ module "container_definition_nginx" {
     },
   ]
 
-  volumes_from = ["${var.name}"]
+  volumes_from = [
+    {
+      "sourceContainer" = "${var.name}"
+      "readOnly"        = true
+    },
+  ]
 
-  links = ["${var.name}:django"]
+  links = [
+    "${var.name}:django",
+  ]
 
   log_options = [
     {
