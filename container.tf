@@ -1,6 +1,6 @@
 module "container_definition" {
   source  = "cloudposse/ecs-container-definition/aws"
-  version = "v0.19.0"
+  version = "v0.17.0"
 
   container_name  = "${var.name}"
   container_image = "${var.image == "" ? aws_ecr_repository.application.repository_url : var.image}"
@@ -30,7 +30,7 @@ module "container_definition" {
 
 module "container_definition_nginx" {
   source  = "cloudposse/ecs-container-definition/aws"
-  version = "v0.19.0"
+  version = "v0.17.0"
 
   container_name  = "nginx_proxy"
   container_image = "nginx:latest"
