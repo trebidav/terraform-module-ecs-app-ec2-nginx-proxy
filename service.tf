@@ -16,7 +16,7 @@ resource "aws_ecs_service" "application" {
   scheduling_strategy                = "${var.scheduling_strategy}"
 
   load_balancer {
-    container_name   = "${var.name}"
+    container_name   = "nginx_proxy"
     container_port   = "${var.port}"
     target_group_arn = "${aws_lb_target_group.application.arn}"
   }

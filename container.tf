@@ -9,6 +9,8 @@ module "container_definition" {
   container_memory_reservation = "${var.memory}"
   container_memory             = "${var.memory_limit}"
 
+  port_mappings = []
+
   log_options = [
     {
       "awslogs-region"        = "${data.aws_region.current.name}"
