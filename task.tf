@@ -13,7 +13,7 @@ resource "aws_ecs_task_definition" "application" {
     name = "nginx_config"
 
     docker_volume_configuration {
-      scope         = "shared"
+      scope         = "task"
       autoprovision = true
       driver        = "local"
     }
