@@ -14,7 +14,6 @@ resource "aws_ecs_task_definition" "application" {
 
     docker_volume_configuration {
       scope         = "task"
-      autoprovision = true
       driver        = "local"
     }
   }
