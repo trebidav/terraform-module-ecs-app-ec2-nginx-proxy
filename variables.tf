@@ -163,3 +163,7 @@ variable "placement_constraint_type" {
 variable "placement_constraint_expression" {
   default = "agentConnected==true"
 }
+
+variable "use_ecr_image_scanning" {
+  default = true
+}
